@@ -65,6 +65,10 @@
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
+# Google Firebase / Firestore related
+**/ios/Runner/GoogleService-Info.plist
+**/android/app/google-services.json
+
 # Exceptions to above rules.
 !**/ios/**/default.mode1v3
 !**/ios/**/default.mode2v3
