@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "541151345398",
+    "firebase_url": "https://flutterpersistentcloud.firebaseio.com",
+    "project_id": "flutterpersistentcloud",
+    "storage_bucket": "flutterpersistentcloud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541151345398:android:af33da6dcac9ebef1e0ad7",
+        "android_client_info": {
+          "package_name": "software.eggzotic.flutter_persistent_cloud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541151345398-uid2jqcajkqvtt179cd8r90t1d0r0ulc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqgfO3PmSXWz8FsDk1MNanBvO_6baW2A0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541151345398-uid2jqcajkqvtt179cd8r90t1d0r0ulc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "541151345398-5t6sec5tgoqcufm6de0ttj5e976abia4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "software.eggzotic.flutterPersistentCloud"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
