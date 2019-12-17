@@ -8,6 +8,8 @@ The original "flutter create" app re-written entirely with Stateless Widgets, us
 
 This project is the third in a series starting from the default Flutter starter app, converting to all-Stateless Widgets, and now adding persistent & shared data via Google Cloud Firestore. The repo for the previous edition is at https://github.com/eggzotic/flutter_persistent_local
 
+This repo, as-is, will not build a working Flutter App. You need to create a Firestore Project, plus DB, access-rules and structure as per the article at https://medium.com/@eggzotic/cloud-based-data-persistence-in-flutter-5fd7f1440f25 - only then will you have your own fully functioning Flutter app.
+
 A few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
