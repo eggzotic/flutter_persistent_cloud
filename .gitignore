@@ -65,6 +65,9 @@
 **/ios/ServiceDefinitions.json
 **/ios/Runner/GeneratedPluginRegistrant.*
 
+# Web related
+/web/index.html
+
 # Google Firebase / Firestore related
 **/ios/Runner/GoogleService-Info.plist
 **/android/app/google-services.json

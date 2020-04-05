@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_persistent_cloud/my_platform.dart';
 import 'package:provider/provider.dart';
 //
 import 'counter_state.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       //  instance of CounterState by simply calling
       //  "Provider.of<CounterState>(context)" in it's build method.
       home: ChangeNotifierProvider(
-        create: (context) => CounterState(),
+        create: (context) => CounterState(MyPlatform()),
         child: MyHomePage(title: 'Cloud Storage Demo'),
       ),
     );
@@ -73,7 +74,7 @@ class MyHomePage extends StatelessWidget {
                     ? CircularProgressIndicator()
                     : Text(
                         '${counterState.value}',
-                        style: Theme.of(context).textTheme.display1,
+                        style: Theme.of(context).textTheme.headline4
                       ),
             (counterState.hasError || counterState.isWaiting)
                 ? Text('')
@@ -81,7 +82,7 @@ class MyHomePage extends StatelessWidget {
                     children: [
                       Text('last changed by: ${counterState.lastUpdatedByDevice}'),
                       SizedBox(height: 16.0),
-                      Text('(This device: ${counterState.myDevice})'),
+                      Text('(This device: ${counterState.myPlatform})'),
                     ],
                   ),
           ],

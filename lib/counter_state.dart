@@ -1,16 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'my_device.dart';
+import 'package:flutter_persistent_cloud/my_platform.dart';
 
 // this class contains all the state used in the sample app
 class CounterState with ChangeNotifier {
   //
   // default Constructor - ensures we load the latest saved-value from the DB
-  CounterState() {
-    _myDevice = MyDevice()
-      ..addListener(() {
-        notifyListeners();
-      });
+  CounterState(this._myPlatform) {
     // start listening for DB data
     _listenForUpdates();
   }
@@ -25,14 +21,14 @@ class CounterState with ChangeNotifier {
   // persistent state - i.e. what we will store and load across app runs
   int _value;
   String _lastUpdatedByDevice;
-  MyDevice _myDevice;
+  final MyPlatform _myPlatform;
   //
   // read-only access to the state
   // - ensuring state is modified only via whatever methods
   //   we expose (in this case "increment" and "reset" only)
   int get value => _value;
   String get lastUpdatedByDevice => _lastUpdatedByDevice;
-  String get myDevice => _myDevice.name;
+  String get myPlatform => _myPlatform.name;
   //
   // transient state - i.e. will not be stored when the app is not running
   //  internal-only readiness- & error-status
@@ -40,7 +36,7 @@ class CounterState with ChangeNotifier {
   bool _hasError = false;
   //
   // read-only status indicators
-  bool get isWaiting => _isWaiting || _myDevice.isWaiting;
+  bool get isWaiting => _isWaiting;
   bool get hasError => _hasError;
   //
   // how we modify the state
@@ -61,7 +57,7 @@ class CounterState with ChangeNotifier {
     try {
       await _sharedCounterDoc.setData({
         _dbCounterValueField: _value,
-        _dbDeviceNameField: myDevice,
+        _dbDeviceNameField: myPlatform,
       });
       _hasError = false;
     } catch (error) {
