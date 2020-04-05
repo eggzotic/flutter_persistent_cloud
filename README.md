@@ -4,7 +4,7 @@ The original "flutter create" app re-written entirely with Stateless Widgets, us
 - persistent storage for the app state, via Google Cloud Firestore
 - data-sharing, for the state data - run simultaneously in multiple simulators/emulators/devices to see real-time data-sharing
 - web ready! Be sure to follow the instructions at https://flutter.dev/docs/get-started/web#set-up to get the supported Flutter version and have web enabled. Then "flutter create ." inside the project folder to create that web subtree. Finally, follow the instructions at https://pub.dev/packages/cloud_firestore for Web. Note that the device_info package is no longer used (as it's not web-ready) and a custom my_platform.dart file has been added to the project instead.
-- use "flutter run -d chrome" to see it running side-by-side with any iOS/Android sims.
+- use "flutter run -d chrome" to see the web-version running side-by-side with any other iOS/Android sims you're already running.
 
 ## Getting Started
 
